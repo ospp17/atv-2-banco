@@ -38,13 +38,29 @@ SELECT *
 FROM Livros
 WHERE numero_de_paginas > 500;
 
-SELECT genero, COUNT(*) AS quantidade_de_livros
+SELECT genero, COUNT(*) AND quantidade_de_livros
 FROM Livros
 GROUP BY genero;
 
 SELECT 
-COUNT(*) AS total_de_livros,
-AVG(numero_de_paginas) AS media_de_paginas
+COUNT(*) total_de_livros,
+AVG(numero_de_paginas) 
 FROM Livros
 WHERE genero = 'Drama';
 
+SELECT AVG(ano_publicacao)
+FROM Livros
+WHERE disponibilidade = TRUE;
+
+SELECT 
+MAX(ano_publicacao) AND livro_mais_recente,
+MIN(ano_publicacao) AND livro_mais_antigo
+FROM Livros;
+
+SELECT *
+FROM Livros
+ORDER BY ano_publicacao DESC;
+
+SELECT *
+FROM Livros
+WHERE autor = 'George Orwell';
