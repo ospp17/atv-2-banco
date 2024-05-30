@@ -6,3 +6,6 @@ VALUES ('Cem Anos de Solidão', 'Gabriel Garcia Marque', 1967, 'Ficçao', 978-02
 ('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 1997, 'Fantasia', 978-0439708180, 'Bloomsbury', 309, 'ingles')
 ('O Senhor dos Anéis: A Sociedade do Ane', 'J.R.R', 1954, 'Fantasia', 978-0618640157, 'HarperCollins', 423, 'ingles');
 
+UPDATE Livros
+SET disponibilidade = FALSE
+WHERE ano_publicacao < 2000;
